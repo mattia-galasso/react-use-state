@@ -1,21 +1,10 @@
-export default function LanguagesItem({ title, description, isVisible }) {
+export default function LanguagesItem({ title, description }) {
   return (
     <>
-      {isVisible && (
-        <div className="language-item">
-          <h3>{title}</h3>
-          <p>{description}</p>
-        </div>
-      )}
+      <div className="language-item">
+        <h4 className="title-card">{title}</h4>
+        <p>{description}</p>
+      </div>
     </>
   );
 }
-
-<div id="container-btn">
-  <button>HTML</button>
-  <button>CSS</button>
-  <button>JavaScript</button>
-  <button>Node.js</button>
-  <button>Express</button>
-  <button>ReactJS</button>
-</div>;

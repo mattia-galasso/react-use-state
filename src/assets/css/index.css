@@ -2,12 +2,25 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-  margin: 2rem 8rem;
+.bg-header {
+  background-color: lightgray;
 }
 
-.languages-box {
-  margin: 3rem 0;
+h1 {
+  font-weight: 600;
+}
+
+.title-card {
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.empty-box {
+  text-align: center;
+  width: 50%;
 }
 
 .language-item {

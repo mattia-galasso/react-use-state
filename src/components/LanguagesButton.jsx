@@ -1,7 +1,12 @@
-export default function LanguageButton({ title, hiddenLanguage }) {
+export default function LanguageButton({ title, hiddenLanguage, isOpen }) {
   return (
     <>
-      <button onClick={hiddenLanguage}>{title}</button>
+      <button
+        className={isOpen ? "btn btn-warning me-3" : "btn btn-primary me-3"}
+        onClick={hiddenLanguage}
+      >
+        {title}
+      </button>
     </>
   );
 }

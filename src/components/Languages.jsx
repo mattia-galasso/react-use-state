@@ -1,7 +1,6 @@
 import { useState } from "react";
 import LanguagesItem from "./LanguagesItem";
 import LanguageButton from "./LanguagesButton";
-LanguageButton;
 
 const languages = [
   {
@@ -48,7 +47,7 @@ export default function Languages() {
   return (
     <>
       {/* BUTTON BOX */}
-      <div id="btn-box">
+      <div>
         {languages.map((language, index) => (
           <LanguageButton
             //
@@ -57,20 +56,23 @@ export default function Languages() {
             hiddenLanguage={() =>
               setVisibleItem(visibleItem === index ? null : index)
             }
+            isOpen={visibleItem === index}
           />
         ))}
       </div>
 
       {/* TEXT BOX */}
-      <div className="languages-box">
-        {languages.map((language, index) => (
+      <div className="my-5">
+        {visibleItem === null ? (
+          <h2 className="title-card language-item empty-box">
+            Nessun linguaggio selezionato
+          </h2>
+        ) : (
           <LanguagesItem
-            key={index}
-            title={language.title}
-            description={language.description}
-            isVisible={visibleItem === index}
+            title={languages[visibleItem].title}
+            description={languages[visibleItem].description}
           />
-        ))}
+        )}
       </div>
     </>
   );
