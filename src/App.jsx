@@ -1,15 +1,16 @@
 import { useState } from "react";
+import Languages from "./components/Languages";
 
 export default function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <div className="container">
+        <div>
+          <h1>Learn Web Development</h1>
+        </div>
+        <Languages />
       </div>
     </>
   );
